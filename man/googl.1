@@ -16,3 +16,18 @@ http://en.wikipedia.org
 googl http://goo.gl/Y9So
 .SH BUGS
 Neither authentification nor passing multiple URLs is supported right now.
+
+
+void push(node_t * head, int val) {
+    node_t * current = head;
+    while (current->next != NULL) {
+        current = current->next;
+    }
+
+    /* now we can add a new variable */
+    current->next = malloc(sizeof(node_t));
+    current->next->val = val;
+    current->next->next = NULL;
+}
+
+// add this upper code .c//
